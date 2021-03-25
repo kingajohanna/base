@@ -40,8 +40,8 @@ public class TrainSensorTest {
 
     @Test
     public void NewSpeedLimitIsCorrect(){
-        when(trainController.getReferenceSpeed()).thenReturn(150);
         trainSensor.overrideSpeedLimit(200);
         verify(trainUser, times(0)).setAlarmState(false);
     }
+
 }
